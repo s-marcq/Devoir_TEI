@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE TEI SYSTEM "DTD_catalogue_oeuvres_stO.dtd">
+<?xml-model href="./ODD_catalogue_oeuvres_stO.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="./ODD_catalogue_oeuvres_stO.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title ref="https://catalogue.bnf.fr/ark:/12148/cb31202945s">Catalogue des tableaux du
+               musée communal de Saint-Omer</title>
+            <author ref="https://catalogue.bnf.fr/ark:/12148/cb10482850r"><persName>Charles
+                  Révillon</persName></author>
+            <respStmt>
+               <resp>Encodage réalisé dans le cadre de l'évaluation du cours de XML TEI du Master 2
+                  TNAH</resp>
+               <persName xml:id="SM">
+                  <forename>Sarah</forename>
+                  <surname>Marcq</surname>
+               </persName>
+            </respStmt>
+            <respStmt xml:id="numerisation">
+               <resp>Texte numérisé et ainsi mis à disposition par</resp>
+               <orgName>la Bibliothèque nationale de France</orgName>
+            </respStmt>
+         </titleStmt>
+
+         <publicationStmt>
+            <publisher>Ecole nationale des chartes</publisher>
+            <address>
+               <addrLine>66 rue de Richelieu, 75002 Paris</addrLine>
+            </address>
+            <pubPlace>Paris, France</pubPlace>
+
+            <availability status="free">
+               <p>Texte d'origine dans le domaine public</p>
+            </availability>
+            <date when="2024-02-10"/>
+         </publicationStmt>
+
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <author ref="https://catalogue.bnf.fr/ark:/12148/cb10482850r"><persName>Charles
+                        Révillon</persName></author>
+                  <title ref="https://catalogue.bnf.fr/ark:/12148/cb31202945s">Catalogue des
+                     tableaux du musée communal de Saint-Omer</title>
+                  <imprint>
+                     <pubPlace>Saint-Omer</pubPlace>
+                     <publisher>Imprimerie et lithographie de H. d'Homont</publisher>
+                     <date when="1898">1898</date>
+                     <distributor facs="https://gallica.bnf.fr/ark:/12148/bpt6k6524683j">Gallica,
+                           <orgName>Bibliothèque nationale de France</orgName></distributor>
+                  </imprint>
+               </monogr>
+               <citedRange from="6" to="9" unit="pp"/>
+            </biblStruct>
+         </sourceDesc>
+
+
+      </fileDesc>
+
+      <encodingDesc>
+         <projectDesc>
+            <p>Cet encodage a été réalisé à partir de la numérisation disponible sur Gallica du du
+               catalogue des tableaux du musée de Saint-Omer publié par Charles Revillon en 1898,
+               imprimé à Saint-Omer par l'Imprimerie et lithographie de H. d'Homont. Le texte a été
+               transcrit fidèlement, à l'exception des césures de fin de ligne, rassemblées en un
+               seul mot. La graisse a été ignoré. L'italique a été retranscrit lorsqu'il était
+               porteur de sens. La structure des paragraphe n'a pas été conservée mais est
+               perceptible par le découpage du texte en entrées, objets et paragraphes.Certains
+               éléments, tels que les numéros des tableaux, ont été intégrés en tant
+               qu’attributs. Les informations relatives aux artistes, aux œuvres, aux provenances et
+               aux acquisitions ont été encodées avec les balises TEI qui paraissaient les plus
+               adéquates sémantiquement, pour permettre des recherches et une analyse efficaces du texte.</p>
+
+         </projectDesc>
+      </encodingDesc>
+
+      <profileDesc>
+         <langUsage>
+            <language ident="fr"/>
+         </langUsage>
+         <creation>
+            <date when="1898">1898</date>
+            <country key="FR">France</country>
+            <lang xml:lang="fr"/>
+         </creation>
+      </profileDesc>
+
+      <revisionDesc>
+         <change when="2023-12-10" who="#SM">
+            <p>Début de l'encodage.</p>
+         </change>
+         <change when="2024-01-15" who="#SM">
+            <p>Encodage des tableaux en tant qu'"objets" et non "figures".</p>
+         </change>
+         <change when="2024-01-17" who="#SM">
+            <p>Suppression des placeName et de certaines dates</p>
+         </change>
+         <change when="2024-01-27" who="#SM">
+            <p>Ajout des attributs pour les dates et les personnes.</p>
+         </change>
+         <change when="2024-02-16" who="#SM">
+            <p>Ajout des url des images dans l'attribut @facs des balises "title"</p>
+         </change>
+         <change when="2024-02-18" who="#SM">
+            <p>Ajout et complétion de l'élément standOff</p>
+         </change>
+         <change when="2024-02-19" who="#SM">
+            <p>Fin de l'encodage (dernières corrections) et début de l'ODD.</p>
+         </change>
+      </revisionDesc>
+
+   </teiHeader>
+
+   <standOff>
+      <listPerson type="artistes">
+         <person xml:id="vbou">
+            <persName>Boulogne, Valentin (de)</persName>
+         </person>
+         <person xml:id="lbra">
+            <persName>Bramer, Léonard</persName>
+         </person>
+         <person xml:id="pbri">
+            <persName>Brill, Paul</persName>
+         </person>
+         <person xml:id="pbruv">
+            <persName>Brueghel, Pieter (l'Ancien)</persName>
+         </person>
+         <person xml:id="pbrue">
+            <persName>Brueghel, Pieter (le Jeune)</persName>
+         </person>
+      </listPerson>
+
+      <listObject type="tableaux">
+         <object n="12">
+            <objectIdentifier>
+               <objectName>
+                  <title
+                     facs="https://s3.eu-west-3.amazonaws.com/pop-phototeque/joconde/06500100092/0100092x1.jpg"
+                     >Musicien jouant de la viole.</title>
+               </objectName>
+            </objectIdentifier>
+            <note type="reattribution">Peintre inconnu, du style de Valentin de Boulogne</note>
+         </object>
+         <object n="13">
+            <objectIdentifier>
+               <objectName>
+                  <title
+                     facs="https://s3.eu-west-3.amazonaws.com/pop-phototeque/joconde/06500100103/0100103x1.jpg"
+                     >Musicien tenant un vidrecome.</title>
+               </objectName>
+            </objectIdentifier>
+            <note type="reattribution">Peintre inconnu, du style de Valentin de Boulogne</note>
+         </object>
+         <object n="14">
+            <objectIdentifier>
+               <objectName>
+                  <title
+                     facs="https://s3.eu-west-3.amazonaws.com/pop-phototeque/joconde/M0650000039/054133.jpg"
+                     >Un vieillard.</title>
+               </objectName>
+            </objectIdentifier>
+            <note type="reattribution">Attribué à Horst Gerrit Willemsz</note>
+            <note type="evolutionTitre">Tête de vieillard</note>
+         </object>
+         <object n="16">
+            <objectIdentifier>
+               <objectName>
+                  <title>Paysage.</title>
+               </objectName>
+            </objectIdentifier>
+         </object>
+         <object n="17">
+            <objectIdentifier>
+               <objectName>
+                  <title
+                     facs="https://s3.eu-west-3.amazonaws.com/pop-phototeque/joconde/06500100153/0100153x1.jpg"
+                     >Danse de paysans.</title>
+               </objectName>
+            </objectIdentifier>
+            <note type="reattribution">Peintre inconnu</note>
+            <note type="evolutionTitre">Danse des Catherinettes</note>
+         </object>
+         <object n="18">
+            <objectIdentifier>
+               <objectName>
+                  <title
+                     facs="https://s3.eu-west-3.amazonaws.com/pop-phototeque/joconde/M0650000164/054119.jpg"
+                     >Opération de la pierre de tête.</title>
+               </objectName>
+            </objectIdentifier>
+            <note type="reattribution">Peintre inconnu, copie d'après Pieter Brueghel
+               l'Ancien</note>
+         </object>
+         <object n="19">
+            <objectIdentifier>
+               <objectName>
+                  <title
+                     facs="https://s3.eu-west-3.amazonaws.com/pop-phototeque/joconde/M0650000165/052686.jpg"
+                     >Kermesse flamande.</title>
+               </objectName>
+            </objectIdentifier>
+         </object>
+      </listObject>
+
+   </standOff>
+
+
+   <text>
+      <body>
+
+         <entryFree type="noticeArtiste" corresp="#vbou">
+            <persName role="artiste"><surname>Boullongne</surname>,
+                  <forename>Valentin</forename><nameLink>de</nameLink>, dit <addName type="surnom"
+                  >le Valentin</addName></persName>, né à Coulommiers (Seine-et-Marne) <date
+               when="1591-01" type="naissance">en janvier 1591</date>, mort à Rome, <date
+               when="1634-08-07" type="décès">le 7 août 1634</date>. — <quote>« On l'a long-temps
+               appelé Moïse Valentin par suite d'une corruption du mot <hi rend="italic">Monsu</hi>
+               dont d'Argenville a fait Moïse au lieu de <hi rend="italic">Monsieur</hi>. »</quote>
+            <ref>(Siret.)</ref>
+            <listObject>
+               <object type="tableau" n="#12">
+                  <objectIdentifier>
+                     <objectName>
+                        <title>Musicien jouant de la viole.</title>
+                        <material>&T.;</material>
+                        <dimensions>
+                           <height unit="cm">h.78c</height>
+                           <width unit="cm">l.60c</width>
+                        </dimensions>
+                     </objectName>
+                  </objectIdentifier>
+                  <physDesc>
+                     <p>Vu à mi-corps, de trois quarts, l'épaule gauche découverte, l'artiste est
+                        coiffé d'un chapeau orné d'une plume blanche ; il chante en s'accompagnant
+                        d'une viole.</p>
+                  </physDesc>
+               </object>
+               <object type="tableau" n="#13">
+                  <objectIdentifier>
+                     <objectName>
+                        <title>Musicien tenant un vidrecome.</title>
+                        <material>&T.;</material>
+                        <dimensions>
+                           <height unit="cm">h.78c</height>
+                           <width unit="cm">l.60c</width>
+                        </dimensions>
+                     </objectName>
+                  </objectIdentifier>
+                  <physDesc>
+                     <p>Vu à mi-corps, presque de face, l'épaule droite découverte, cet autre
+                        artiste est également coiffé d'un chapeau orné d'une plume. Il tient un
+                        vidrecome de ses deux mains et chante ; un cahier de musique est ouvert
+                        devant lui.</p>
+                  </physDesc>
+                  <history>
+                     <provenance>Ces deux tableaux, formant pendants, proviennent de la collection
+                        de feu <persName role="collectionneur">M. <forename><choice>
+                                 <abbr>Aug.</abbr>
+                                 <expan>Auguste</expan>
+                              </choice></forename>
+                           <surname>Deschamps de Pas</surname></persName>, à
+                        Saint-Omer,</provenance>
+                     <acquisition> et ont été achetés en <date when="1883" type="acquisition"
+                           >1883</date>.</acquisition>
+                  </history>
+               </object>
+            </listObject>
+         </entryFree>
+
+         <entryFree type="noticeArtiste" corresp="#lbra">
+            <persName role="artiste"><surname>Bramer</surname>,
+               <forename>Léonard</forename></persName>, né à Delft en <date>1596</date>. <listObject>
+               <object type="tableau" n="#14">
+                  <objectIdentifier>
+                     <objectName>
+                        <title>Un vieillard.</title>
+                        <material>&T.;</material>
+                        <dimensions>
+                           <height unit="cm">h.75c</height>
+                           <width unit="cm">l.63c</width>
+                        </dimensions>
+                     </objectName>
+                  </objectIdentifier>
+                  <physDesc>
+                     <p>Vu à mi-corps, la tête coiffée d'une calotte d'où s'échappe une abondante
+                        chevelure blanche. Dans la main droite, un rouleau de papier.</p>
+                  </physDesc>
+                  <history>
+                     <acquisition>Legs de <persName role="collectionneur">M.
+                              <forename>Louis</forename>
+                           <surname>Martel</surname></persName>, <date when="1892"
+                           type="acquisition">1892</date>.</acquisition>
+                     <p>Ce tableau a figuré à l'Exposition de Saint-Omer en 1843, sous le n°
+                        267.</p>
+                  </history>
+               </object>
+            </listObject>
+         </entryFree>
+
+
+         <entryFree type="renvoi"> Breughel, Voir <ref target="#pbruv">Brueghel</ref>
+         </entryFree>
+
+         <entryFree type="noticeArtiste" corresp="#pbri">
+            <persName role="artiste">
+               <surname>Brill</surname>, <forename>Paul</forename>
+            </persName>, né à Anvers en <date when="1556" type="naissance">1556</date>, mort à Rome
+            en <date when="1626" type="décès">1626</date>, fils de Mathieu le vieux. — Élève de
+               <persName role="maitre"><forename>Damien</forename>
+               <surname>Ortelman</surname></persName> et de son frère <persName role="maitre"
+                  ><forename>Mathieu</forename>
+               <surname>le jeune</surname></persName>. <listObject>
+               <object type="tableau" n="#16">
+                  <objectIdentifier>
+                     <objectName>
+                        <title>Paysage.</title>
+                        <material>&B.;</material>
+                        <dimensions>
+                           <height unit="cm">h.40c</height>
+                           <width unit="cm">l.58c</width>
+                        </dimensions>
+                     </objectName>
+                  </objectIdentifier>
+                  <physDesc>
+                     <p>Paysage dont on peut dire : grand paysage dans un petit cadre. Il est animé
+                        vers la gauche par un vieillard près d'une femme qui tient un enfant dans
+                        ses bras. A droite, par deux autres personnages. En arrière-plan, nombreuses
+                        constructions dans la verdure ; un cours d'eau s'avance jusqu'au premier
+                        plan. Des montagnes ferment l'horizon.</p>
+                  </physDesc>
+                  <history>
+                     <acquisition>Don de M. <persName role="collectionneur"
+                              ><forename>Louis</forename>
+                           <surname>Le Sergeant de Monnecove</surname></persName>, <date when="1834"
+                           type="acquisition">1834</date>.</acquisition>
+                  </history>
+               </object>
+            </listObject>
+         </entryFree>
+
+         <entryFree type="noticeArtiste" corresp="#pbruv">
+            <persName role="artiste">
+               <surname>Brueghel</surname>, <forename>Pierre</forename>, le vieux <addName
+                  type="surnom">dit Brueghel le Drôle ou des Paysans</addName>
+            </persName>, né à Brueghel, village près de Bréda, vers <date when="1525"
+               type="naissance">1525</date>, mort à Bruxelles, <date when="1569-09-05" type="décès"
+               >le 5 septembre 1569</date>. <listObject>
+               <object type="tableau" n="#17">
+                  <objectIdentifier>
+                     <objectName>
+                        <title>Danse de paysans.</title>
+                        <material>&B.;</material>
+                        <dimensions>
+                           <height unit="cm">h.75c</height>
+                           <width unit="cm">l.105c</width>
+                        </dimensions>
+                     </objectName>
+                  </objectIdentifier>
+                  <physDesc>
+                     <p>Des paysans <quote>« se trémoussent sous une tonnelle verdoyante, aux sons
+                           d'une musique assez primitive. Parmi les femmes en coiffes blanches, on
+                           distingue une dame de condition plus haute, sans doute la châtelaine qui
+                           se mêle aux ébats de ses vassaux. Elle porte un diadème et sa robe est
+                           richement ornée de bijoux. Vis-à-vis d'elle, un rustaud se démène et
+                           gesticule lourdement d'une manière grotesque, comme s'il voulait déployer
+                           en son honneur toute la virtuosité de sa chorégraphie rustique.
+                        »</quote></p>
+                     <p>Cette description, <ref>due à M. Emile Michel (Les Brueghel)</ref> à propos
+                        d'un tableau faisant partie de la collection du marquis Mansi, s'applique
+                        exactement au tableau du musée de Saint-Omer. C'est donc une répétition du
+                        tableau de la collection Mansi, ou, réciproquement.</p>
+                  </physDesc>
+                  <history>
+                     <acquisition>Acheté en <date when="1846" type="acquisition"
+                        >1846</date>.</acquisition>
+                     <p>Ce tableau a figuré à l'Exposition rétrospective d'Arras en 1896.</p>
+                  </history>
+               </object>
+               <object type="tableau" n="#18">
+                  <objectIdentifier>
+                     <objectName>
+                        <title>Opération de la pierre de tête.</title>
+                        <material>&B.;</material>
+                        <dimensions>
+                           <height unit="cm">h.77c</height>
+                           <width unit="cm">l.107c</width>
+                        </dimensions>
+                     </objectName>
+                  </objectIdentifier>
+                  <physDesc>
+                     <p>Composition grotesque. Un patient lié à un fauteuil, se débat sous
+                        l'impression de la douleur que lui cause le chirurgien qui l'opère; derrière
+                        le fauteuil, apparaît une figure grimaçante. A gauche, un autre patient est
+                        tombé avec le fauteuil auquel il est lié, l'opérateur attaché à son client,
+                        l'a suivi dans sa chute et continue à lui inciser le front. A gauche, un
+                        client, à la figure épouvantée, se trouve entre deux opérateurs qui
+                        paraissent le maintenir étroitement, celui de droite tient dans la bouche un
+                        instrument tranchant. A l'arrière-plan, un malade est apporté sur le dos
+                        d'un bonhomme dont il entoure la tête de ses deux bras ; derrière, apparaît
+                        un groupe d'arrivants, l'un d'eux a enfoncé le panneau d'une porte et
+                        regarde curieusement l'intérieur de la salle. A gauche, un malade assis dans
+                        un fauteuil, une main enveloppée, tient un sabre sous le bras, il a un pied
+                        déchaussé, et le front, ceint d'un bandeau A gauche encore de ce personnage,
+                        un patient est attaché au fauteuil sur lequel il est assis, une religieuse
+                        lui bande le front ; il en est d'autres enfin dans des positions...
+                        diverses</p>
+                  </physDesc>
+                  <history>
+                     <acquisition>Acheté en <date when="1881" type="acquisition"
+                        >1881</date>.</acquisition>
+                     <p>Ce tableau a figuré à l'Exposition rétrospective d'Arras en 1896.</p>
+                  </history>
+               </object>
+            </listObject>
+         </entryFree>
+
+         <entryFree type="noticeArtiste" corresp="#pbrue">
+            <persName role="artiste">
+               <surname>Brueghel</surname>, <forename>Pierre</forename>, dit <addName type="surnom"
+                  >l'Enfer</addName>
+            </persName>, fils du <ref target="#pbruv">précédent</ref> né en <date when="1564"
+               type="naissance">1564</date>, mort en <date when="1638" type="décès">1638-39</date>.
+            Reçu dans la corporation de Saint-Luc en 1585. — Élève de <persName role="maitre"
+                  ><forename>Gilles</forename>
+               <surname>Van Coninxloo</surname></persName>. <listObject>
+               <object type="tableau" n="#19">
+                  <objectIdentifier>
+                     <objectName>
+                        <title>Kermesse flamande.</title>
+                        <material>&B.;</material>
+                        <dimensions>
+                           <height unit="cm">h.37c</height>
+                           <width unit="cm">l.61c</width>
+                        </dimensions>
+                     </objectName>
+                  </objectIdentifier>
+                  <physDesc>
+                     <p>Un ivrogne boit en s'appuyant sur l'épaule d'un compagnon ; une femme le
+                        soutient de la main gauche, à sa droite un enfant se réfugie près d'elle. A
+                        gauche un bâtiment dans lequel sont rassemblés quelques paysans, plusieurs y
+                        entrent à leur tour ; une table près de ce bâtiment est occupée par
+                        plusieurs convives auprès desquels sont deux chiens. A droite, un homme et
+                        une femme dansent en se tenant par les mains. En arriére-plan, une longue
+                        perspective d'arbres s'étend jusqu'à l'horizon ; cette perspective est
+                        animée par des joueurs de bâton et par divers groupes. Quelques
+                        constructions dans la verdure complètent l'ensemble de la composition.</p>
+                  </physDesc>
+                  <history>
+                     <acquisition>Acheté en <date when="1831" type="acquisition"
+                        >1831</date>.</acquisition>
+                  </history>
+               </object>
+            </listObject>
+         </entryFree>
+
+      </body>
+   </text>
+</TEI>

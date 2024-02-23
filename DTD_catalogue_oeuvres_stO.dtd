@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Abbrévation du matériau -->
+<!ENTITY B. "<choice><abbr>B.</abbr><expan>Peinture sur bois</expan></choice>" >
+<!ENTITY T. "<choice><abbr>T.</abbr><expan>Peinture sur toile</expan></choice>" >
