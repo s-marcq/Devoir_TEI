@@ -9,5 +9,5 @@ Le repository contient :
 - Le document XML de l'***ODD***
 - La **version HTML** de l'*ODD*
 - Le document ***Relax NG*** issu de l'*ODD*
-- Un dossier contenant les images du texte encodé
+- Un **fichier pdf** contenant les images du texte encodé
 
