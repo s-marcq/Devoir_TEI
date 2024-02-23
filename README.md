@@ -1,4 +1,4 @@
-Documents produits dans le cadre de l'encodage réalisé pour l'évaluation du cours d'XML-TEI du M2 TNAH.
+Documents produits dans le cadre de l'évaluation du cours d'XML-TEI du M2 TNAH.
 
 Le repository contient :
 - Le texte encodé en **XML-TEI**
