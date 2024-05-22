@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+COMMENTAIRE
+Très bon travail, modélisation adaptée et règles d'encodage tout à fait pertinentes
+Documentation claire avec une bonne explication des exploitations possibles
+Bonne pratique de mettre des exemples dans les règles de validation
+Projet éditorial cohérent et encodage minutieux, bravo !
+-->
+
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en"
-   xmlns:s="http://purl.oclc.org/dsdl/schematron" xmlns:rng="http://relaxng.org/ns/structure/1.0">
+     xmlns:s="http://purl.oclc.org/dsdl/schematron" xmlns:rng="http://relaxng.org/ns/structure/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -9,14 +18,13 @@
             <author>Sarah Marcq</author>
          </titleStmt>
          <publicationStmt>
-            <p>Edition encodée dans le cadre de l'évaluation du cours d'XML-TEI de la deuxième année
+            <p>Édition encodée dans le cadre de l'évaluation du cours d'XML-TEI de la deuxième année
                du master "Technologies numériques appliquées à l'histoire" (École nationale des
                chartes).</p>
          </publicationStmt>
          <sourceDesc>
             <p>Transcription et encodage réalisés à partir de la numérisation du catalogue
-               disponible sur Gallica : <graphic
-                  url="https://gallica.bnf.fr/ark:/12148/bpt6k6524683j"/></p>
+               disponible sur Gallica : <graphic url="https://gallica.bnf.fr/ark:/12148/bpt6k6524683j"/></p>
          </sourceDesc>
       </fileDesc>
 
@@ -26,15 +34,15 @@
 
          <div1>
             <head>Guide de l'encodage de l'édition numérique du <hi rend="italic">Catalogue des
-                  Tableaux du Musée Communal de Saint-Omer</hi></head>
+               Tableaux du Musée Communal de Saint-Omer</hi></head>
             <p>Ce guide vise à détailler la manière dont a été encodé le <hi rend="italic">Catalogue
-                  des Tableaux du Musée Communal de Saint-Omer</hi>.</p>
+               des Tableaux du Musée Communal de Saint-Omer</hi>.</p>
 
             <div2>
                <head>Présentation de l'édition</head>
 
                <p>Cette première version de l'édition du <hi rend="italic">Catalogue des Tableaux du
-                     Musée Communal de Saint-Omer</hi> rassemble des notices provenant des pages 6 à
+                  Musée Communal de Saint-Omer</hi> rassemble des notices provenant des pages 6 à
                   9 et est composée d'un document XML, de son ODD, d’un document RNG issu de l’ODD
                   et d’une DTD.</p>
                <p>Le projet d'encodage TEI du Catalogue des Tableaux du Musée Communal de Saint-Omer
@@ -75,25 +83,25 @@
                   <div4>
                      <head>Le <hi rend="italic">fileDesc</hi></head>
                      <p>Le fileDesc contient les métadonnées générales sur l'édition TEI. Dans le
-                           <gi>titleStmt</gi> se trouvent le titre et l'auteur du texte d'origine,
+                        <gi>titleStmt</gi> se trouvent le titre et l'auteur du texte d'origine,
                         et deux <gi>respStmt</gi> où sont encodées les mentions de responsabilité
                         pour l'encodage et pour la conservation et numérisation du texte source. Le
-                           <gi>publicationStmt</gi> contient les métadonnées sur la publication de
+                        <gi>publicationStmt</gi> contient les métadonnées sur la publication de
                         l'édition électronique. Enfin, le <gi>sourceDesc</gi> donne des informations
                         sur la source transcrite de manière structurée dans une balise
-                           <gi>biblStruct</gi>. </p>
+                        <gi>biblStruct</gi>. </p>
                   </div4>
 
                   <div4>
                      <head>L'<hi rend="italic">encodingDesc</hi></head>
-                     <p>L'encodingDesc contient une balise <gi>projectDesc</gi> dont le contenu
+                     <p>L'<gi>encodingDesc</gi> contient une balise <gi>projectDesc</gi> dont le contenu
                         donne des informations sur la transcription et la réalisation
                         l'encodage.</p>
 
                   </div4>
                   <div4>
                      <head>Le <hi rend="italic">profileDesc</hi></head>
-                     <p>Le profileDesc contient quelques métadonnées supplémentaires sur l'édition
+                     <p>Le <gi>profileDesc</gi> contient quelques métadonnées supplémentaires sur l'édition
                         telles que la langue (<gi>langUsage</gi>)</p>
 
                   </div4>
@@ -102,7 +110,8 @@
                      <head>Le <hi rend="italic">revisionDesc</hi></head>
                      <p>Ici sont listées les modifications principales dans l'encodage au fil de la
                         réalisation du projet avec leur date et la personne responsable.</p>
-                     <p> Exemple : <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                     <p> Exemple :
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
                            <change when="2024-02-18" who="#SM">
                               <p>Ajout et complétion de l'élément standOff</p>
                            </change>
@@ -120,14 +129,14 @@
 
                   <div4>
                      <head>Les artistes</head>
-                     <p> Une liste des artistes dont la notice est encodée dans le corps du texte se
+                     <p>Une liste des artistes dont la notice est encodée dans le corps du texte se
                         trouve dans l’élément <gi>listPerson</gi>. Un attribut <att>xml:id</att>
                         unique est attribué à chacun des artistes et il y est fait référence dans
                         chaque entrée par artiste dans le corps du texte. Leurs noms sont
-                        actualisés. Cette partie peut ainsi servir d'index et d'entrée dans le
+                        <!--actualisés-->modernisés. Cette partie peut ainsi servir d'index et d'entrée dans le
                         contenu textuel. Chaque personne est encodée avec une balise <gi>person</gi>
-                        puis <gi>persName</gi> comme suit : <egXML
-                           xmlns="http://www.tei-c.org/ns/Examples">
+                        puis <gi>persName</gi> comme suit :
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
                            <person xml:id="vbou">
                               <persName>Boulogne, Valentin (de)</persName>
                            </person>
@@ -139,14 +148,14 @@
                      <head>Les tableaux (objects)</head>
                      <p>Les tableaux listés plus bas dans chaque entrée sur un artiste se trouvent
                         dans la balise <gi>listObject</gi>. Chaque tableau est contenu dans un
-                           <gi>object</gi> qui possède un identifiant (attribut <att>n</att>) calqué
-                        sur celui qu'il possède dans le catalogue. Des donnée supplémentaires sur
+                        <gi>object</gi> qui possède un identifiant (attribut <att>n</att>) calqué
+                        sur celui qu'il possède dans le catalogue. Des données supplémentaires sur
                         les titres ou les attributions ont été ajoutées dans les balises
-                           <gi>notes</gi>. Leur type (réattribution ou changement de titre) est
+                        <gi>notes</gi>. Leur type (réattribution ou changement de titre) est
                         signalé par l'attribut <att>type</att>. Les liens vers les images de chaque
-                        tableaux sont accessibles dans l’attribut <att>facs</att> du titre. Dans la
+                        tableau sont accessibles dans l’attribut <att>facs</att> du titre. Dans la
                         TEI, ce dernier fait en effet référence à une image liée au texte transcrit,
-                        ce qui a son interêt ici et premettra d'afficher le tableau dans le document
+                        ce qui a son intérêt ici et permettra d'afficher le tableau dans le document
                         HTML après la transformation XSLT.</p>
 
                      <p>
@@ -154,9 +163,8 @@
                            <object n="12">
                               <objectIdentifier>
                                  <objectName>
-                                    <title
-                                       facs="https://s3.eu-west-3.amazonaws.com/pop-phototeque/joconde/06500100092/0100092x1.jpg"
-                                       >Musicien jouant de la viole.</title>
+                                    <title facs="https://s3.eu-west-3.amazonaws.com/pop-phototeque/joconde/06500100092/0100092x1.jpg">
+                                       Musicien jouant de la viole.</title>
                                  </objectName>
                               </objectIdentifier>
                               <note type="reattribution">Peintre inconnu, du style de Valentin de
@@ -172,18 +180,18 @@
 
                   <p>Enfin, l'élément <gi>text</gi> contient les différentes notices éditées. Elles
                      se trouvent dans l’élément <gi>body</gi>. Le livre comporte des entrées par
-                     artiste, et à l’intérieur de ces entrées, des notices par tableau. </p>
+                     artiste, et à l’intérieur de ces entrées, des notices par tableau.</p>
 
                   <div4>
                      <head>Les artistes</head>
 
-                     <p> Les sections par artiste sont délimitées par la balise <gi>entryFree</gi>
-                        dont chacune fait référence à un xml:id d’artiste défini plus haut dans le
-                           <hi rend="italic">standOff</hi>. On y trouve une courte biographie de
+                     <p>Les sections par artiste sont délimitées par la balise <gi>entryFree</gi>
+                        dont chacune fait référence à un <att>xml:id</att> d’artiste défini plus haut dans le
+                        <hi rend="italic">standOff</hi>. On y trouve une courte biographie de
                         l’artiste, où les dates de naissance et de décès sont encodées grâce à
                         l'élément <gi>date</gi>, ainsi que les noms des maîtres (<gi>persName</gi>,
                         attribut <att>role</att>). La balise <gi>entryFree</gi> a été choisie parce
-                        qu'elle signifie une entrée, ici ce n'est pas une entrée de dictionnaire
+                        qu'elle signifie une entrée, ici ce n'est pas une entrée de dictionnaire,
                         mais une entrée de catalogue, et parce qu'un contenu assez divers est
                         autorisé. La liste des tableaux du peintre de l'entrée est l'enfant de cette
                         balise <gi>entryFree</gi>. Elle est contenue dans <gi>listObject</gi>.
@@ -193,8 +201,8 @@
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                            <entryFree type="noticeArtiste" corresp="#lbra">
                               <persName role="artiste"><surname>Bramer</surname>,
-                                    <forename>Léonard</forename></persName>, né à Delft en
-                                 <date>1596</date>. <listObject/>
+                                 <forename>Léonard</forename></persName>, né à Delft en
+                              <date>1596</date>. <listObject/>
                            </entryFree>
                         </egXML>
                      </p>
@@ -202,80 +210,78 @@
 
                   <div4>
                      <head>Les tableaux</head>
-                     <p>Chaque <gi>object</gi> présente : <list>
-                           <item>un titre : <gi>title</gi>, avec un identifiant (dans
-                              <att>n</att>)</item>
+                     <p>Chaque <gi>object</gi> présente :
+                        <list>
+                           <item>un titre : <gi>title</gi>, avec un identifiant (dans <att>n</att>)</item>
                            <item>un matériau de support : <gi>materials</gi></item>
                            <item>des dimensions : <gi>dimensions</gi>, dont l'unité est le système
-                              métrique (<att>unit</att>) et qui sont divisées en deux : <list>
+                              métrique (<att>unit</att>) et qui sont divisées en deux :
+                              <list>
                                  <item>hauteur <gi>height</gi></item>
                                  <item>largeur <gi>width</gi></item>
                               </list>
                            </item>
-                        </list> Tout cela est rassemblé dans les balises <gi>objectIdentifier</gi>
-                        et <gi>objectName</gi> puisqu'il s'agit des informations formant le <hi
-                           rend="italic">cartel</hi> de l'oeuvre. </p>
+                        </list>
+                        Tout cela est rassemblé dans les balises <gi>objectIdentifier</gi>
+                        et <gi>objectName</gi> puisqu'il s'agit des informations formant le
+                        <hi rend="italic">cartel</hi> de l'œuvre.</p>
                      <p>Une description physique (<gi>physDesc</gi>) suit ce cartel. Il s'agit de la
-                        description de la scène représentée. </p>
-                     <p> Enfin, des informations d'ordre historique sur le tableau sont encodées
+                        description de la scène représentée.</p>
+                     <p>Enfin, des informations d'ordre historique sur le tableau sont encodées
                         dans la balise <gi>history</gi>. Il peut s'agir d'informations sur
-                        l'acquisition de l'oeuvre. Dans ce cas, elles se trouveront dans la balise
-                           <gi>acquisition</gi>. La provenance de l'oeuvre, donc les informations
-                        antérieurs à son acquisition, est quant à elle encodée dans la balise
-                           <gi>provenance</gi>. D'autres éléments divers, par exemple se rapportant
-                        à des expositions, sont également contenues dans l'<hi rend="italic"
-                           >history</hi>.</p>
+                        l'acquisition de l'œuvre. Dans ce cas, elles se trouveront dans la balise
+                        <gi>acquisition</gi>. La provenance de l'œuvre, donc les informations
+                        antérieures à son acquisition, est quant à elle encodée dans la balise
+                        <gi>provenance</gi>. D'autres éléments divers, par exemple se rapportant
+                        à des expositions, sont également contenues dans l'<hi rend="italic">history</hi>.</p>
 
-                     <p> Voici un exemple d'encodage de tableau : <egXML
-                           xmlns="http://www.tei-c.org/ns/Examples">
-                           <object type="tableau" n="#13">
-                              <objectIdentifier>
-                                 <objectName>
-                                    <title>Musicien tenant un vidrecome.</title>
-                                    <material>T. </material>
-                                    <dimensions>
-                                       <height unit="cm">h. 78c,</height>
-                                       <width unit="cm">l. 60c.</width>
-                                    </dimensions>
-                                 </objectName>
-                              </objectIdentifier>
-                              <physDesc>
-                                 <p>Vu à mi-corps, presque de face, l'épaule droite découverte, cet
-                                    autre artiste est également coiffé d'un chapeau orné d'une
-                                    plume. Il tient un vidrecome de ses deux mains et chante ; un
-                                    cahier de musique est ouvert devant lui.</p>
-                              </physDesc>
-                              <history>
-                                 <provenance>Ces deux tableaux, formant pendants, proviennent de la
-                                    collection de feu <persName role="collectionneur">M. <forename><choice>
-                                             <abbr>Aug.</abbr>
-                                             <expan>Auguste</expan>
-                                          </choice></forename>
-                                       <surname>Deschamps de Pas</surname></persName>, à
-                                    Saint-Omer,</provenance>
-                                 <acquisition> et ont été achetés en <date when="1883"
-                                       type="acquisition">1883</date>.</acquisition>
-                              </history>
-                           </object>
-                        </egXML>
+                     <p>Voici un exemple d'encodage de tableau :
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <object type="tableau" n="#13">
+                           <objectIdentifier>
+                              <objectName>
+                                 <title>Musicien tenant un vidrecome.</title>
+                                 <material>T. </material>
+                                 <dimensions>
+                                    <height unit="cm">h. 78c,</height>
+                                    <width unit="cm">l. 60c.</width>
+                                 </dimensions>
+                              </objectName>
+                           </objectIdentifier>
+                           <physDesc>
+                              <p>Vu à mi-corps, presque de face, l'épaule droite découverte, cet
+                                 autre artiste est également coiffé d'un chapeau orné d'une
+                                 plume. Il tient un vidrecome de ses deux mains et chante ; un
+                                 cahier de musique est ouvert devant lui.</p>
+                           </physDesc>
+                           <history>
+                              <provenance>
+                                 Ces deux tableaux, formant pendants, proviennent de la collection de feu
+                                 <persName role="collectionneur">M.
+                                    <forename><choice><abbr>Aug.</abbr><expan>Auguste</expan></choice></forename>
+                                    <surname>Deschamps de Pas</surname></persName>, à Saint-Omer,
+                              </provenance>
+                              <acquisition> et ont été achetés en <date when="1883" type="acquisition">1883</date>.</acquisition>
+                           </history>
+                        </object>
+                     </egXML>
                      </p>
                   </div4>
 
                   <div4>
                      <head>Dans le contenu textuel</head>
                      <list>
-                        <item> Les <gi>date</gi> : Les dates encodées sont les dates de décès et de
+                        <item>Les <gi>date</gi> : Les dates encodées sont les dates de décès et de
                            naissance des artistes, ainsi que les dates d'acquisition. Il s'agit en
                            effet des dates qui ont paru les plus utiles dans le cadre d'une étude
                            scientifique sur le catalogue.</item>
-                        <item> Les <gi>persName</gi> : Les personnes encodées sont les artistes, les
+                        <item>Les <gi>persName</gi> : Les personnes encodées sont les artistes, les
                            maîtres des artistes et les collectionneurs. A l'intérieur du
-                              <gi>persName</gi>, leurs noms, prénoms et surnoms sont encodés pour
-                           pouvoir créer un index si besoin. Exemple : <egXML
-                              xmlns="http://www.tei-c.org/ns/Examples">
+                           <gi>persName</gi>, leurs noms, prénoms et surnoms sont encodés pour
+                           pouvoir créer un index si besoin. Exemple :
+                           <egXML xmlns="http://www.tei-c.org/ns/Examples">
                               <surname>Brueghel</surname>, <forename>Pierre</forename>, le vieux
-                                 <addName type="surnom">dit Brueghel le Drôle ou des
-                                 Paysans</addName>
+                              <addName type="surnom">dit Brueghel le Drôle ou des Paysans</addName>
                            </egXML>
                         </item>
                         <item>Les citations : Des balises <gi>quote</gi> ont été ajoutées pour
@@ -297,19 +303,19 @@
                <!-- MODULES OBLIGATOIRES -->
                <moduleRef key="tei"/>
                <moduleRef key="header"
-                  include="teiHeader fileDesc titleStmt publicationStmt distributor availability sourceDesc encodingDesc projectDesc samplingDecl profileDesc creation langUsage language revisionDesc change"/>
+                          include="teiHeader fileDesc titleStmt publicationStmt distributor availability sourceDesc encodingDesc projectDesc samplingDecl profileDesc creation langUsage language revisionDesc change"/>
                <moduleRef key="core"
-                  include="p hi quote desc choice address addrLine date abbr expan ref note graphic monogr author respStmt resp title imprint publisher citedRange pubPlace biblStruct"/>
+                          include="p hi quote desc choice address addrLine date abbr expan ref note graphic monogr author respStmt resp title imprint publisher citedRange pubPlace biblStruct"/>
                <moduleRef key="textstructure" include="TEI text body"/>
 
                <!-- MODULES ADDITIONNELS -->
                <moduleRef key="msdescription"
-                  include="dimensions height width material physDesc history provenance acquisition"/>
+                          include="dimensions height width material physDesc history provenance acquisition"/>
                <moduleRef key="namesdates"
-                  include="orgName persName surname forename nameLink addName country listPerson person objectName object listObject objectIdentifier"/>
+                          include="orgName persName surname forename nameLink addName country listPerson person objectName object listObject objectIdentifier"/>
                <moduleRef key="dictionaries" include="entryFree lang"/>
                <moduleRef key="tagdocs"
-                  include="classRef elementRef moduleRef schemaSpec elementSpec classSpec content sequence constraint constraintSpec attList attDef datatype dataRef valItem valList"/>
+                          include="classRef elementRef moduleRef schemaSpec elementSpec classSpec content sequence constraint constraintSpec attList attDef datatype dataRef valItem valList"/>
                <moduleRef key="linking" include="standOff"/>
                <moduleRef key="corpus" include="particDesc"/>
 
@@ -534,6 +540,7 @@
                      l'évolution des attributions ou des titres</desc>
                   <!-- Restriction du contenu aux deux listes -->
                   <content>
+                     <!--OK-->
                      <sequence preserveOrder="false">
                         <elementRef key="listObject" minOccurs="1" maxOccurs="1"/>
                         <elementRef key="listPerson" minOccurs="1" maxOccurs="1"/>
@@ -558,8 +565,10 @@
                      large que la balise <gi>entry</gi>.</desc>
                   <attList>
                      <attDef ident="facs" mode="delete"/>
+
                      <!-- attribut type obligatoire et de type teidata.word pour les entrées par artistes-->
                      <attDef ident="type" mode="change" usage="req">
+                        <!--OK-->
                         <desc xml:lang="fr"> L'attribut @type est obligatoire et doit être un mot. </desc>
                         <datatype>
                            <dataRef key="teidata.word"/>
@@ -692,10 +701,11 @@
                <elementSpec ident="object" mode="change">
                   <gloss>Notice de tableau.</gloss>
                   <desc>Contient un moyen d'identifier le tableau avec la balise
-                        <gi>objectIdentifier</gi>, puis soit une balise <gi>physDesc</gi> et une
+                     <gi>objectIdentifier</gi>, puis soit une balise <gi>physDesc</gi> et une
                      balise <gi>history</gi> en ce qui concerne le corps du texte, soit une ou
                      plusieurs balises <gi>note</gi>, en ce qui concerne le <gi>standOff</gi>. Voir
-                     les deux exemples ci-dessous. <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                     les deux exemples ci-dessous.
+                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <object type="tableau" n="#16">
                            <objectIdentifier>
                               <objectName/>
@@ -705,10 +715,11 @@
                                  [...]</p>
                            </physDesc>
                            <history>
-                              <acquisition>Don de M. <persName role="collectionneur"
-                                       ><forename>Louis</forename>
-                                    <surname>Le Sergeant de Monnecove</surname></persName>, <date
-                                    when="1834" type="acquisition">1834</date>.</acquisition>
+                              <acquisition>Don de M. <persName role="collectionneur">
+                                 <forename>Louis</forename>
+                                 <surname>Le Sergeant de Monnecove</surname></persName>,
+                                 <date when="1834" type="acquisition">1834</date>.
+                              </acquisition>
                            </history>
                         </object>
                      </egXML>
@@ -727,6 +738,7 @@
                   <content>
                      <elementRef key="objectIdentifier" minOccurs="1" maxOccurs="1"/>
                      <alternate>
+                        <!--OK-->
                         <sequence preserveOrder="false">
                            <elementRef key="physDesc" minOccurs="0" maxOccurs="unbounded"/>
                            <elementRef key="history" minOccurs="0" maxOccurs="unbounded"/>
@@ -735,9 +747,11 @@
                      </alternate>
                   </content>
                   <!-- obligation identifiant d'objet -->
+                  <!--OK-->
                   <constraintSpec ident="object" scheme="schematron">
                      <constraint>
                         <s:rule context="tei:object">
+                           <!--Plus simple de contraindre ça avec attDef@usage="req"-->
                            <s:assert test="@n"> Numéro du tableau à ajouter obligatoirement.
                            </s:assert>
                         </s:rule>
@@ -760,6 +774,7 @@
                   <!-- contrainte dans objectIdentifier : obligation de la balise <objectName/> pour l'identification -->
                   <content>
                      <sequence>
+                        <!--OK-->
                         <elementRef key="objectName" minOccurs="1" maxOccurs="1"/>
                      </sequence>
                   </content>
@@ -773,7 +788,8 @@
                   <gloss>Element permettant de faire référence au tableau</gloss>
                   <desc>L'<hi rend="italic">objectName</hi> est ici traité comme l'équivalent du
                      cartel du tableau. Il contient donc un titre, des dimensions et le matériau de
-                     support. <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                     support. <!--Bien-->
+                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <objectName>
                            <title>Opération de la pierre de tête.</title>
                            <material>B. </material>
@@ -804,9 +820,9 @@
                </elementSpec>
                <!-- Contenu objectName -->
                <elementSpec ident="title" mode="change">
-                  <gloss>Titre de l'oeuvre ou de l'ouvrage concerné. </gloss>
+                  <gloss>Titre de l'œuvre ou de l'ouvrage concerné. </gloss>
                   <desc>Cette balise a une valeur sémantique plus forte que la balise <gi>head</gi>.
-                     Elle est donc mieux adaptée à l'idée de titre d'oeuvre d'art ou de l'esprit.</desc>
+                     Elle est donc mieux adaptée à l'idée de titre d'œuvre d'art ou de l'esprit.</desc>
                   <attList>
                      <attDef ident="calendar" mode="delete"/>
                      <attDef ident="level" mode="delete"/>
@@ -822,6 +838,7 @@
                   <!-- contrainte : obligation de width et height -->
                   <content>
                      <sequence>
+                        <!--OK-->
                         <elementRef key="height" minOccurs="1" maxOccurs="1"/>
                         <elementRef key="width" minOccurs="1" maxOccurs="1"/>
                      </sequence>
@@ -837,11 +854,12 @@
                </elementSpec>
                <elementSpec ident="height" mode="change">
                   <gloss>Hauteur d'après le système métrique. L'unité est spécifiée via l'attribut
-                        <att>unit</att>.</gloss>
+                     <att>unit</att>.</gloss>
                   <!-- contrainte unité : utilisation du système métrique -->
                   <constraintSpec ident="metre" scheme="schematron">
                      <constraint>
                         <s:rule context="tei:height">
+                           <!--OK-->
                            <s:assert test="matches(@unit, '^\w{0,2}m$')"> Il faut utiliser le
                               système métrique : @unit doit respecter la forme '^\w{0,2}m$'.
                               caractère </s:assert>
@@ -860,11 +878,12 @@
                </elementSpec>
                <elementSpec ident="width" mode="change">
                   <gloss>Largeur d'après le système métrique. L'unité est spécifiée via l'attribut
-                        <att>unit</att>.</gloss>
+                     <att>unit</att>.</gloss>
                   <!-- contrainte unité : utilisation du système métrique-->
                   <constraintSpec ident="metre" scheme="schematron">
                      <constraint>
                         <s:rule context="tei:width">
+                           <!--OK-->
                            <s:assert test="matches(@unit, '^\w{0,2}m$')"> Il faut utiliser le
                               système métrique : @unit doit respecter la forme '^\w{0,2}m$'.
                            </s:assert>
@@ -936,7 +955,8 @@
                      <!-- contrainte date : forcément une date d'acquisition dans la balise acquisition -->
                      <constraint>
                         <s:rule context="tei:acquisition//tei:date">
-                           <s:assert test="@type='acquisition'"> La valeur de l'attribut "type" de
+                           <!--OK-->
+                           <s:assert test="@type='acquisition'">La valeur de l'attribut "type" de
                               la balise "date" est forcément une acquisition dans la balise
                               "acquisition". </s:assert>
                         </s:rule>
@@ -1009,11 +1029,12 @@
                   <gloss>Contient une date.</gloss>
                   <desc>L'attribut <att>when</att> des dates suit le format YYYY-MM-DD. Dans
                      l'édition, il s'agit soit de dates de naissance ou décès de l'artiste ou bien
-                     d'acquisition. <egXML xmlns="http://www.tei-c.org/ns/Examples"><persName
-                           role="artiste"><surname>Brill</surname>,
-                           <forename>Paul</forename></persName>, né à Anvers en <date when="1556"
-                           type="naissance">1556</date>, mort à Rome en <date when="1626"
-                           type="décès">1626</date>, fils de Mathieu le vieux. </egXML>
+                     d'acquisition.
+                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <persName role="artiste"><surname>Brill</surname>,
+                        <forename>Paul</forename></persName>, né à Anvers en
+                        <date when="1556" type="naissance">1556</date>, mort à Rome en <date when="1626">1626</date>
+                     </egXML>
                   </desc>
                   <attList>
                      <attDef ident="corresp" mode="delete"/>
@@ -1057,8 +1078,8 @@
                <elementSpec ident="note" mode="change">
                   <gloss>Notes, informations non contenues dans le texte d'origine.</gloss>
                   <desc>Dans le standOff, elles servent à mentionner la dernière attribution ou le
-                     dernier titre du tableau lorsque ces derniers ont évolué. <egXML
-                        xmlns="http://www.tei-c.org/ns/Examples">
+                     dernier titre du tableau lorsque ces derniers ont évolué.
+                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
                         <object n="14">
                            <objectIdentifier/>
                            <note type="reattribution">Attribué à Horst Gerrit Willemsz</note>

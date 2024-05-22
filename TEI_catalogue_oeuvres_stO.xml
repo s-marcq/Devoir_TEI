@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE TEI SYSTEM "DTD_catalogue_oeuvres_stO.dtd">
-<?xml-model href="./RNG_catalogue_oeuvres_stO.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-model href="./RNG_catalogue_oeuvres_stO.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="out/ODD_catalogue_oeuvres_stO.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="out/ODD_catalogue_oeuvres_stO.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
 
@@ -138,9 +138,8 @@
          <object n="12">
             <objectIdentifier>
                <objectName>
-                  <title
-                     facs="https://s3.eu-west-3.amazonaws.com/pop-phototeque/joconde/06500100092/0100092x1.jpg"
-                     >Musicien jouant de la viole.</title>
+                  <title facs="https://s3.eu-west-3.amazonaws.com/pop-phototeque/joconde/06500100092/0100092x1.jpg">
+                     Musicien jouant de la viole.</title>
                </objectName>
             </objectIdentifier>
             <note type="reattribution">Peintre inconnu, du style de Valentin de Boulogne</note>
@@ -148,9 +147,8 @@
          <object n="13">
             <objectIdentifier>
                <objectName>
-                  <title
-                     facs="https://s3.eu-west-3.amazonaws.com/pop-phototeque/joconde/06500100103/0100103x1.jpg"
-                     >Musicien tenant un vidrecome.</title>
+                  <title facs="https://s3.eu-west-3.amazonaws.com/pop-phototeque/joconde/06500100103/0100103x1.jpg">
+                     Musicien tenant un vidrecome.</title>
                </objectName>
             </objectIdentifier>
             <note type="reattribution">Peintre inconnu, du style de Valentin de Boulogne</note>
@@ -158,9 +156,8 @@
          <object n="14">
             <objectIdentifier>
                <objectName>
-                  <title
-                     facs="https://s3.eu-west-3.amazonaws.com/pop-phototeque/joconde/M0650000039/054133.jpg"
-                     >Un vieillard.</title>
+                  <title facs="https://s3.eu-west-3.amazonaws.com/pop-phototeque/joconde/M0650000039/054133.jpg">
+                     Un vieillard.</title>
                </objectName>
             </objectIdentifier>
             <note type="reattribution">Attribué à Horst Gerrit Willemsz</note>
@@ -176,9 +173,8 @@
          <object n="17">
             <objectIdentifier>
                <objectName>
-                  <title
-                     facs="https://s3.eu-west-3.amazonaws.com/pop-phototeque/joconde/06500100153/0100153x1.jpg"
-                     >Danse de paysans.</title>
+                  <title facs="https://s3.eu-west-3.amazonaws.com/pop-phototeque/joconde/06500100153/0100153x1.jpg">
+                     Danse de paysans.</title>
                </objectName>
             </objectIdentifier>
             <note type="reattribution">Peintre inconnu</note>
@@ -187,9 +183,8 @@
          <object n="18">
             <objectIdentifier>
                <objectName>
-                  <title
-                     facs="https://s3.eu-west-3.amazonaws.com/pop-phototeque/joconde/M0650000164/054119.jpg"
-                     >Opération de la pierre de tête.</title>
+                  <title facs="https://s3.eu-west-3.amazonaws.com/pop-phototeque/joconde/M0650000164/054119.jpg">
+                     Opération de la pierre de tête.</title>
                </objectName>
             </objectIdentifier>
             <note type="reattribution">Peintre inconnu, copie d'après Pieter Brueghel
@@ -198,9 +193,8 @@
          <object n="19">
             <objectIdentifier>
                <objectName>
-                  <title
-                     facs="https://s3.eu-west-3.amazonaws.com/pop-phototeque/joconde/M0650000165/052686.jpg"
-                     >Kermesse flamande.</title>
+                  <title facs="https://s3.eu-west-3.amazonaws.com/pop-phototeque/joconde/M0650000165/052686.jpg">
+                     Kermesse flamande.</title>
                </objectName>
             </objectIdentifier>
          </object>
@@ -213,11 +207,12 @@
       <body>
 
          <entryFree type="noticeArtiste" corresp="#vbou">
-            <persName role="artiste"><surname>Boullongne</surname>,
-                  <forename>Valentin</forename><nameLink>de</nameLink>, dit <addName type="surnom"
-                  >le Valentin</addName></persName>, né à Coulommiers (Seine-et-Marne) <date
-               when="1591-01" type="naissance">en janvier 1591</date>, mort à Rome, <date
-               when="1634-08-07" type="décès">le 7 août 1634</date>. — <quote>« On l'a long-temps
+            <persName role="artiste">
+               <surname>Boullongne</surname>,
+               <forename>Valentin</forename><nameLink>de</nameLink>, dit
+               <addName type="surnom">le Valentin</addName></persName>, né à Coulommiers (Seine-et-Marne)
+               <date when="1591-01" type="naissance">en janvier 1591</date>, mort à Rome,
+               <date when="1634-08-07" type="décès">le 7 août 1634</date>. — <quote>« On l'a long-temps
                appelé Moïse Valentin par suite d'une corruption du mot <hi rend="italic">Monsu</hi>
                dont d'Argenville a fait Moïse au lieu de <hi rend="italic">Monsieur</hi>. »</quote>
             <ref>(Siret.)</ref>
@@ -258,14 +253,10 @@
                   </physDesc>
                   <history>
                      <provenance>Ces deux tableaux, formant pendants, proviennent de la collection
-                        de feu <persName role="collectionneur">M. <forename><choice>
-                                 <abbr>Aug.</abbr>
-                                 <expan>Auguste</expan>
-                              </choice></forename>
-                           <surname>Deschamps de Pas</surname></persName>, à
-                        Saint-Omer,</provenance>
-                     <acquisition> et ont été achetés en <date when="1883" type="acquisition"
-                           >1883</date>.</acquisition>
+                        de feu <persName role="collectionneur">M. <forename>
+                        <choice><abbr>Aug.</abbr><expan>Auguste</expan></choice></forename>
+                        <surname>Deschamps de Pas</surname></persName>, à Saint-Omer,</provenance>
+                     <acquisition> et ont été achetés en <date when="1883" type="acquisition">1883</date>.</acquisition>
                   </history>
                </object>
             </listObject>
@@ -290,12 +281,12 @@
                         chevelure blanche. Dans la main droite, un rouleau de papier.</p>
                   </physDesc>
                   <history>
-                     <acquisition>Legs de <persName role="collectionneur">M.
-                              <forename>Louis</forename>
-                           <surname>Martel</surname></persName>, <date when="1892"
-                           type="acquisition">1892</date>.</acquisition>
-                     <p>Ce tableau a figuré à l'Exposition de Saint-Omer en 1843, sous le n°
-                        267.</p>
+                     <acquisition>
+                        Legs de <persName role="collectionneur">M. <forename>Louis</forename>
+                        <surname>Martel</surname></persName>,
+                        <date when="1892" type="acquisition">1892</date>.
+                     </acquisition>
+                     <p>Ce tableau a figuré à l'Exposition de Saint-Omer en 1843, sous le n° 267.</p>
                   </history>
                </object>
             </listObject>
@@ -306,14 +297,12 @@
          </entryFree>
 
          <entryFree type="noticeArtiste" corresp="#pbri">
-            <persName role="artiste">
-               <surname>Brill</surname>, <forename>Paul</forename>
-            </persName>, né à Anvers en <date when="1556" type="naissance">1556</date>, mort à Rome
+            <persName role="artiste"><surname>Brill</surname>, <forename>Paul</forename></persName>,
+            né à Anvers en <date when="1556" type="naissance">1556</date>, mort à Rome
             en <date when="1626" type="décès">1626</date>, fils de Mathieu le vieux. — Élève de
-               <persName role="maitre"><forename>Damien</forename>
-               <surname>Ortelman</surname></persName> et de son frère <persName role="maitre"
-                  ><forename>Mathieu</forename>
-               <surname>le jeune</surname></persName>. <listObject>
+            <persName role="maitre"><forename>Damien</forename><surname>Ortelman</surname></persName>
+            et de son frère <persName role="maitre"><forename>Mathieu</forename><surname>le jeune</surname></persName>.
+            <listObject>
                <object type="tableau" n="#16">
                   <objectIdentifier>
                      <objectName>
@@ -333,10 +322,10 @@
                         plan. Des montagnes ferment l'horizon.</p>
                   </physDesc>
                   <history>
-                     <acquisition>Don de M. <persName role="collectionneur"
-                              ><forename>Louis</forename>
-                           <surname>Le Sergeant de Monnecove</surname></persName>, <date when="1834"
-                           type="acquisition">1834</date>.</acquisition>
+                     <acquisition>
+                        Don de M. <persName role="collectionneur"><forename>Louis</forename>
+                        <surname>Le Sergeant de Monnecove</surname></persName>,
+                        <date when="1834" type="acquisition">1834</date>.</acquisition>
                   </history>
                </object>
             </listObject>
@@ -344,11 +333,12 @@
 
          <entryFree type="noticeArtiste" corresp="#pbruv">
             <persName role="artiste">
-               <surname>Brueghel</surname>, <forename>Pierre</forename>, le vieux <addName
-                  type="surnom">dit Brueghel le Drôle ou des Paysans</addName>
-            </persName>, né à Brueghel, village près de Bréda, vers <date when="1525"
-               type="naissance">1525</date>, mort à Bruxelles, <date when="1569-09-05" type="décès"
-               >le 5 septembre 1569</date>. <listObject>
+               <surname>Brueghel</surname>, <forename>Pierre</forename>, le vieux
+               <addName type="surnom">dit Brueghel le Drôle ou des Paysans</addName>
+            </persName>, né à Brueghel, village près de Bréda, vers
+            <date when="1525" type="naissance">1525</date>, mort à Bruxelles,
+            <date when="1569-09-05" type="décès">le 5 septembre 1569</date>.
+            <listObject>
                <object type="tableau" n="#17">
                   <objectIdentifier>
                      <objectName>
@@ -375,8 +365,7 @@
                         tableau de la collection Mansi, ou, réciproquement.</p>
                   </physDesc>
                   <history>
-                     <acquisition>Acheté en <date when="1846" type="acquisition"
-                        >1846</date>.</acquisition>
+                     <acquisition>Acheté en <date when="1846" type="acquisition">1846</date>.</acquisition>
                      <p>Ce tableau a figuré à l'Exposition rétrospective d'Arras en 1896.</p>
                   </history>
                </object>
@@ -420,13 +409,12 @@
 
          <entryFree type="noticeArtiste" corresp="#pbrue">
             <persName role="artiste">
-               <surname>Brueghel</surname>, <forename>Pierre</forename>, dit <addName type="surnom"
-                  >l'Enfer</addName>
-            </persName>, fils du <ref target="#pbruv">précédent</ref> né en <date when="1564"
-               type="naissance">1564</date>, mort en <date when="1638" type="décès">1638-39</date>.
-            Reçu dans la corporation de Saint-Luc en 1585. — Élève de <persName role="maitre"
-                  ><forename>Gilles</forename>
-               <surname>Van Coninxloo</surname></persName>. <listObject>
+               <surname>Brueghel</surname>, <forename>Pierre</forename>, dit <addName type="surnom">l'Enfer</addName>
+            </persName>, fils du <ref target="#pbruv">précédent</ref> né en
+            <date when="1564" type="naissance">1564</date>, mort en <date when="1638" type="décès">1638-39</date>.
+            Reçu dans la corporation de Saint-Luc en 1585. — Élève de <persName role="maitre"><forename>Gilles</forename>
+            <surname>Van Coninxloo</surname></persName>.
+            <listObject>
                <object type="tableau" n="#19">
                   <objectIdentifier>
                      <objectName>
